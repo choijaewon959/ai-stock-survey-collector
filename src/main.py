@@ -1,5 +1,6 @@
 import os
 import json
+import pandas as pd
 from openai_advisor import OpenAIAdvisor
 
 def load_api_key(config_path="config.json"):
@@ -25,7 +26,10 @@ def main():
     try:
         api_key = load_api_key()
         ai_advisor = OpenAIAdvisor(api_key)
-        ai_advisor.get_advice()
+        advices = ai_advisor.get_advice()
+        df = pd.DataFrame(advices)
+        df.to_csv("../advice.csv", index=False)
+        print("Advice saved to advice.csv")
     except Exception as e:
         print(f"Error: {e}")
 
