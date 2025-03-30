@@ -1,0 +1,17 @@
+# Ignore credential files
+*.env
+*.key
+*.pem
+*.crt
+*.p12
+*.json
+
+# Ignore common secrets/config files
+.env.local
+.env.development
+.env.production
+secrets.yml
+config.json
+
+# Ignore any file containing "credentials" in its name
+*credentials*
