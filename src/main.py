@@ -28,7 +28,9 @@ def main():
         ai_advisor = OpenAIAdvisor(api_key)
         advices = ai_advisor.get_advice()
         df = pd.DataFrame(advices)
-        df.to_csv("../advice.csv", index=False)
+        filename = 'advice.csv'
+        filepath = os.path.join(os.getcwd(), filename)
+        df.to_csv(filepath, index=False)
         print("Advice saved to advice.csv")
     except Exception as e:
         print(f"Error: {e}")

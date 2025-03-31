@@ -29,13 +29,14 @@ AI Stock Survey Collector is a daily application that leverages OpenAI's ChatGPT
 
 Run the app manually:
 ```bash
-python main.py
+python src/main.py
 ```
 
 Or schedule it to run daily using a cron job:
 ```bash
 0 9 * * * /usr/bin/python3 /path/to/your/project/main.py
 ```
+Beaware of the relative path of your config.json file when running the app.
 
 ## Configuration
 
