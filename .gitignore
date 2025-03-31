@@ -4,7 +4,6 @@
 *.pem
 *.crt
 *.p12
-*.json
 
 # Ignore common secrets/config files
 .env.local
@@ -15,3 +14,6 @@ config.json
 
 # Ignore any file containing "credentials" in its name
 *credentials*
+
+# Ignore output folder
+/output/

@@ -25,6 +25,19 @@ AI Stock Survey Collector is a daily application that leverages OpenAI's ChatGPT
 3. Set up your environment variables in config.json:
     - `OPENAI_API_KEY`: Your OpenAI API key.
 
+4. Specify stocks in your interest in stocks.json:
+    You can modify the `stocks.json` file to specify the stocks you want to track. The file should contain a list of stock symbols in JSON format. For example:
+
+    ```json
+    {
+        "AAPL": "Apple Inc.",
+        "MSFT": "Microsoft Corporation",
+        "NVDA": "NVIDIA Corporation",
+    }
+    ```
+
+    Update this file to include the stock symbols you are interested in, and the application will use this list for its daily analysis.
+    
 ## Usage
 
 Run the app manually:
@@ -36,7 +49,7 @@ Or schedule it to run daily using a cron job:
 ```bash
 0 9 * * * /usr/bin/python3 /path/to/your/project/main.py
 ```
-Beaware of the relative path of your config.json file when running the app.
+Be aware of the relative path of your config.json file when running the app.
 
 ## Configuration
 

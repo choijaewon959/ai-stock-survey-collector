@@ -22,12 +22,15 @@ class OpenAIAdvisor:
         except Exception as e:
             return f"An error occurred: {e}"
 
-    def get_advice(self):
+    def get_advice(self, stock):
         """
         Get advice from OpenAI based on the user's input prompt.
         """
-        q1 = "Should I buy Apple stock now?"
-        q2 = "Considering current market situation, you would rather either strongly buy/buy/hold/sell/storngly sell Apple stock? Give me short answer, current market price, and target price."
+        q1 = f'''Should I buy {stock} stock now?'''
+        q2 = f'''Considering current market situation, you would rather either strongly buy/buy/hold/sell/storngly sell {stock} stock? 
+                    Give me short answer, current market price, and target price. 
+                    Do not include duplicated information about the stock mentioned in your previous answer.
+              '''
         
         conversation_history = []
         for q in [q1, q2]:
