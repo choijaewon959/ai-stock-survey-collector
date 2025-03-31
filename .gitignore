@@ -17,3 +17,6 @@ config.json
 
 # Ignore output folder
 /output/
+
+# Ignore macOS system files
+.DS_Store
